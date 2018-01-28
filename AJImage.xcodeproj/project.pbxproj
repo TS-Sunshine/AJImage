@@ -18,6 +18,7 @@
 		4400A8512018636C00FB6A88 /* cubeMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 4400A8502018636C00FB6A88 /* cubeMap.c */; };
 		4400A853201866F500FB6A88 /* 印章背景调节.png in Resources */ = {isa = PBXBuildFile; fileRef = 4400A852201866F500FB6A88 /* 印章背景调节.png */; };
 		4400A8552018674A00FB6A88 /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = 4400A8542018674900FB6A88 /* 111.png */; };
+		44DB7DDC2019DCE100B0B7DB /* hehe.png in Resources */ = {isa = PBXBuildFile; fileRef = 44DB7DDB2019DCE100B0B7DB /* hehe.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		4400A8502018636C00FB6A88 /* cubeMap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cubeMap.c; sourceTree = "<group>"; };
 		4400A852201866F500FB6A88 /* 印章背景调节.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "印章背景调节.png"; sourceTree = "<group>"; };
 		4400A8542018674900FB6A88 /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 111.png; sourceTree = "<group>"; };
+		44DB7DDB2019DCE100B0B7DB /* hehe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hehe.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4400A852201866F500FB6A88 /* 印章背景调节.png */,
+				44DB7DDB2019DCE100B0B7DB /* hehe.png */,
 				4400A8542018674900FB6A88 /* 111.png */,
 				4400A81D2018634100FB6A88 /* AppDelegate.h */,
 				4400A84F2018636C00FB6A88 /* cubeMap.h */,
@@ -254,6 +257,7 @@
 				4400A8272018634100FB6A88 /* Assets.xcassets in Resources */,
 				4400A8552018674A00FB6A88 /* 111.png in Resources */,
 				4400A8252018634100FB6A88 /* Main.storyboard in Resources */,
+				44DB7DDC2019DCE100B0B7DB /* hehe.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

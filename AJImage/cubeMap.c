@@ -52,22 +52,19 @@ struct CubeMap createCubeMap(float minHueAngle, float maxHueAngle) {
     float rgb[3], hsv[3], *c = cubeData;
     
     for (int z = 0; z < size; z++){
-        rgb[2] = ((double)z)/(size-1); // Blue value
+        rgb[2] = ((double)z)/(size-1); // 蓝
         for (int y = 0; y < size; y++){
-            rgb[1] = ((double)y)/(size-1); // Green value
+            rgb[1] = ((double)y)/(size-1); // 绿
             for (int x = 0; x < size; x ++){
-                rgb[0] = ((double)x)/(size-1); // Red value
+                rgb[0] = ((double)x)/(size-1); // 红
                 rgbToHSV(rgb,hsv);
-                // Use the hue value to determine which to make transparent
-                // The minimum and maximum hue angle depends on
-                // the color you want to remove
                 float alpha = (hsv[0] > minHueAngle && hsv[0] < maxHueAngle) ? 0.0f: 1.0f;
-                // Calculate premultiplied alpha values for the cube
+                
                 c[0] = rgb[0] * alpha;
                 c[1] = rgb[1] * alpha;
                 c[2] = rgb[2] * alpha;
                 c[3] = alpha;
-                c += 4; // advance our pointer into memory for the next color value
+                c += 4;
             }
         }
     }

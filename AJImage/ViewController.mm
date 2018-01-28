@@ -31,7 +31,7 @@
     [self.view addSubview:oldLabel];
     
     UIImageView *oldImageView = [[UIImageView alloc]initWithFrame:CGRectMake(5, 80, 150, 112)];
-    oldImageView.image = [UIImage imageNamed:@"印章背景调节.png"];
+    oldImageView.image = [UIImage imageNamed:@"hehe.png"];
     [self.view addSubview:oldImageView];
     
     //显示背景图片
@@ -47,7 +47,7 @@
     
     
     //更换背景图片
-    struct CubeMap myCube = createCubeMap(90, 100);
+    struct CubeMap myCube = createCubeMap(6, 71);
     NSData *myData = [[NSData alloc]initWithBytesNoCopy:myCube.data length:myCube.length freeWhenDone:true];
     CIFilter *colorCubeFilter = [CIFilter filterWithName:@"CIColorCube"];
     [colorCubeFilter setValue:[NSNumber numberWithFloat:myCube.dimension] forKey:@"inputCubeDimension"];
@@ -73,7 +73,21 @@
     newImageView.image = [UIImage imageWithCGImage:cgImage];
     [self.view addSubview:newImageView];
     
+    
+    
+    [self CutImageWithImage:backImageView.image withRect:CGRectMake(0, 300, 300 , 300)];
+    
 }
+//剪切的方法
+- (UIImage *)CutImageWithImage:(UIImage *)image withRect:(CGRect)rect
+{
+    //使用CGImageCreateWithImageInRect方法切割图片，第一个参数为CGImage类型，第二个参数为要切割的CGRect
+    CGImageRef cutImage = CGImageCreateWithImageInRect(image.CGImage, rect);
+    //将切割出得图片转换为UIImage
+    UIImage *resultImage = [UIImage imageWithCGImage:cutImage];
+    return resultImage;
+}
+
 
 
 - (void)didReceiveMemoryWarning {
